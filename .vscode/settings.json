@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/bot/bumperbot_ws/src/bumperbot_examples/src"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/bot/bumperbot_ws/src/bumperbot_examples/src"
+    ],
+    "cmake.sourceDirectory": "/home/bot/robot_ws/src/robot_description",
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true
+}

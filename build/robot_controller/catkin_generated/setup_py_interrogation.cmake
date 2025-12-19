@@ -1,0 +1,7 @@
+set(robot_controller_SETUP_PY_SETUP_MODULE "distutils.core")
+set(robot_controller_SETUP_PY_VERSION "0.0.0")
+set(robot_controller_SETUP_PY_SCRIPTS "")
+set(robot_controller_SETUP_PY_PACKAGES "robot_controller")
+set(robot_controller_SETUP_PY_PACKAGE_DIRS "src/robot_controller")
+set(robot_controller_SETUP_PY_MODULES "")
+set(robot_controller_SETUP_PY_MODULE_DIRS "")

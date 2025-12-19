@@ -1,0 +1,12 @@
+is_real_file: false
+
+bumperbot:
+  is_real_file: false
+  number_of_joints: 4
+  name_of_joints:
+    - joint1
+    - joint2
+    - joint3
+    - joint4
+  max_velocity: 1.5
+  min_velocity: -1.5

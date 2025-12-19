@@ -1,0 +1,2 @@
+bumperbot_examples:robot_controller:robot_description
+-DCATKIN_DEVEL_PREFIX=/home/bot/robot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/bot/robot_ws/install -G Unix Makefiles

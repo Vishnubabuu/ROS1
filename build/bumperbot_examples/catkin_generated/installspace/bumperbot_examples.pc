@@ -1,0 +1,8 @@
+prefix=/home/bot/robot_ws/install
+
+Name: bumperbot_examples
+Description: Description of bumperbot_examples
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: turtlesim
