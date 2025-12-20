@@ -2,19 +2,44 @@
 <launch>
     <arg name="wheel_radius" default="0.033"/>
     <arg name="wheel_separation" default="0.17"/>
+    <arg name="use_python" default="false"/>
+    <arg name="py_suffix" value=".py" if="$(arg use_python)"/>
+    <arg name="py_suffix" value="" unless="$(arg use_python)"/>
+    <arg name="is_simple" default="true"/>
+    
+    
+    
 
-    <rosparam command="load" file="$(find robot_controller)/config/simple_controller.yaml"/>
+   
     <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml"/>
 
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" 
           output="screen" respawn="false"/>
 
-    <node name="controller_manager" pkg="controller_manager" type="spawner"
+    <group if="$(arg is_simple)">
+
+      <rosparam command="load" file="$(find robot_controller)/config/simple_controller.yaml"/>
+
+      <node name="controller_manager" pkg="controller_manager" type="spawner"
           output="screen" respawn="false"
           args="wheel_left_controller wheel_right_controller joint_state_controller"/>
 
-    <node name="simple_controller_node" pkg="robot_controller" type="simple_controller_node.py" respawn="true" output="screen">
-    <param name="wheel_radius" value="$(arg wheel_radius)"/>
-    <param name="wheel_separation" value="$(arg wheel_separation)"/>
-    </node>
+      <node name="simple_controller_node" pkg="robot_controller" type="simple_controller_node$(arg py_suffix)" respawn="true" output="screen">
+          <param name="wheel_radius" value="$(arg wheel_radius)"/>
+          <param name="wheel_separation" value="$(arg wheel_separation)"/>
+      </node>
+
+    </group>
+      <group unless="$(arg is_simple)">
+      
+        <rosparam command="load" file="$(find robot_controller)/config/diff_drive_controller.yaml"/>
+      
+        <node name="controller_manager" pkg="controller_manager" type="spawner"
+              output="screen" respawn="false"
+              args="diff_drive_controller joint_state_controller"/>
+      
+        <node name="diff_drive_controller_node" pkg="robot_controller" type="diff_drive_controller_node$(arg py_suffix)" respawn="true" output="screen">
+              <param name="wheel_radius" value="$(arg wheel_radius)"/>
+              <param name="wheel_separation" value="$(arg wheel_separation)"/>
+        </node>
 </launch>
