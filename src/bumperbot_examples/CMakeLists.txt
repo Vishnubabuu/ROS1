@@ -26,6 +26,6 @@ catkin_install_python(PROGRAMS
   nodes/simple_publisher.py
   nodes/simple_subscriber.py
   nodes/turtlesim_kinematics_node.py
-  nodes/tf_example.py
+  nodes/tf_example_node.py
   nodes/simple_timer.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
