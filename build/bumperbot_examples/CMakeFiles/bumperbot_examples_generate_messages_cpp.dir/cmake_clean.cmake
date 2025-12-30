@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/bot/robot_ws/devel/include/bumperbot_examples/AddTwoInts.h"
+  "/home/bot/robot_ws/devel/include/bumperbot_examples/GetTransform.h"
   "CMakeFiles/bumperbot_examples_generate_messages_cpp"
 )
 

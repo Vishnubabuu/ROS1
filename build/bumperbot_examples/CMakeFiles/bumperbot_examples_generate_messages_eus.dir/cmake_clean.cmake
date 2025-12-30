@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/bot/robot_ws/devel/share/roseus/ros/bumperbot_examples/manifest.l"
   "/home/bot/robot_ws/devel/share/roseus/ros/bumperbot_examples/srv/AddTwoInts.l"
+  "/home/bot/robot_ws/devel/share/roseus/ros/bumperbot_examples/srv/GetTransform.l"
   "CMakeFiles/bumperbot_examples_generate_messages_eus"
 )
 

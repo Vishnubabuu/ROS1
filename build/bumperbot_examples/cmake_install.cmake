@@ -42,7 +42,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bumperbot_examples/srv" TYPE FILE FILES "/home/bot/robot_ws/src/bumperbot_examples/srv/AddTwoInts.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bumperbot_examples/srv" TYPE FILE FILES
+    "/home/bot/robot_ws/src/bumperbot_examples/srv/AddTwoInts.srv"
+    "/home/bot/robot_ws/src/bumperbot_examples/srv/GetTransform.srv"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

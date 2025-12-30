@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/bot/robot_ws/devel/lib/python3/dist-packages/bumperbot_examples/srv/_AddTwoInts.py"
+  "/home/bot/robot_ws/devel/lib/python3/dist-packages/bumperbot_examples/srv/_GetTransform.py"
   "/home/bot/robot_ws/devel/lib/python3/dist-packages/bumperbot_examples/srv/__init__.py"
   "CMakeFiles/bumperbot_examples_generate_messages_py"
 )
