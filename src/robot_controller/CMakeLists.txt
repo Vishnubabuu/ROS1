@@ -7,6 +7,9 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   geometry_msgs
   sensor_msgs
+  nav_msgs
+  tf2
+  tf2_ros
 )
 
 catkin_python_setup()
@@ -18,6 +21,9 @@ catkin_package(
   std_msgs
   geometry_msgs
   sensor_msgs
+  nav_msgs
+  tf2
+  tf2_ros
 )
 
 include_directories(
@@ -26,5 +32,6 @@ include_directories(
 
 catkin_install_python(PROGRAMS
   nodes/simple_controller_node.py
+  nodes/noisy_controller_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

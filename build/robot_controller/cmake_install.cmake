@@ -60,3 +60,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_controller" TYPE PROGRAM FILES "/home/bot/robot_ws/build/robot_controller/catkin_generated/installspace/simple_controller_node.py")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_controller" TYPE PROGRAM FILES "/home/bot/robot_ws/build/robot_controller/catkin_generated/installspace/noisy_controller_node.py")
+endif()
+
